@@ -5,7 +5,7 @@ function getF1(e) {
     e.preventDefault()
     let year = document.getElementById("year").value;
     let round = document.getElementById("round").value;
-    fetch(`http://ergast.com/api/f1/${year}/${round}/results.json?`)
+    fetch(`https://ergast.com/api/f1/${year}/${round}/results.json?`)
         .then(response => response.json())
         .then(data => parseData(data.MRData.RaceTable.Races[0]))
     document.getElementById("year").value = '';
